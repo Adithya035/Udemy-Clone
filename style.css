@@ -80,10 +80,12 @@ body {
     right: 0;
     display: none;
 }
-.mylearning:hover .mylearning__popup{
+
+.mylearning:hover .mylearning__popup {
 
     display: block;
 }
+
 .categories {
 
     display: flex;
@@ -98,6 +100,15 @@ body {
     color: white;
     padding: 10px;
     border-radius: 30px;
+    border: #A435F0 1px solid;
+}
+
+.categories p:hover {
+
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
 }
 
 .sale-image {
@@ -114,6 +125,32 @@ body {
     left: 60px;
     padding: 20px;
     background-color: white;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.sale-image__offer:hover {
+
+    transition: 1s;
+    background-color: #A435F0;
+    cursor: pointer;
+}
+
+@keyframes zoom {
+
+    0% {
+
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .recommended {
